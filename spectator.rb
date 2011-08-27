@@ -30,9 +30,13 @@ class Watcher
 			
 			engine = Tilt[in_file]
 			if not engine.nil? and template = engine.new(in_file)
-				out_file = "#{@dest}/#{path}#{name}.html"
+				out_file = "#{@dest}/#{path}#{name}.#{ext(engine)}"
 				file = File.open out_file, "wb"
-				file.write template.render
+				begin
+					file.write template.render
+				rescue Exception => e
+					puts e
+				end
 				file.close
 			else
 				FileUtils.copy in_file, out_file
@@ -59,6 +63,20 @@ class Watcher
 		FileUtils.rm_rf out_file if File.exists? out_file
 		
 		puts "--- #{out_file}"
+	end
+	
+private
+	def ext(engine)
+		case engine.to_s
+		when 'Tilt::SassTemplate',
+		     'Tilt::ScssTemplate',
+		     'Tilt::LessTemplate'
+			return 'css'
+		when 'Tilt::CoffeeScriptTemplate'
+			return 'js'
+		end
+		
+		'html'
 	end
 end
 
