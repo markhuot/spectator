@@ -1,0 +1,6 @@
+[submodule "vendor/gems/tilt"]
+	path = vendor/gems/tilt
+	url = https://github.com/rtomayko/tilt.git
+[submodule "vendor/gems/fssm"]
+	path = vendor/gems/fssm
+	url = https://github.com/ttilley/fssm.git
