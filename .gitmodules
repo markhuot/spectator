@@ -4,3 +4,6 @@
 [submodule "vendor/gems/fssm"]
 	path = vendor/gems/fssm
 	url = https://github.com/ttilley/fssm.git
+[submodule "vendor/gems/haml"]
+	path = vendor/gems/haml
+	url = https://github.com/nex3/haml.git
