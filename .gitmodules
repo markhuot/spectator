@@ -7,3 +7,6 @@
 [submodule "vendor/gems/haml"]
 	path = vendor/gems/haml
 	url = https://github.com/nex3/haml.git
+[submodule "vendor/gems/builder"]
+	path = vendor/gems/builder
+	url = https://github.com/jimweirich/builder.git
