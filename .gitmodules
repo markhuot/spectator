@@ -1,0 +1,21 @@
+[submodule "vendor/gems/tilt"]
+	path = vendor/gems/tilt
+	url = https://github.com/rtomayko/tilt.git
+[submodule "vendor/gems/fssm"]
+	path = vendor/gems/fssm
+	url = https://github.com/ttilley/fssm.git
+[submodule "vendor/gems/haml"]
+	path = vendor/gems/haml
+	url = https://github.com/nex3/haml.git
+[submodule "vendor/gems/builder"]
+	path = vendor/gems/builder
+	url = https://github.com/jimweirich/builder.git
+[submodule "vendor/gems/ruby-coffee-script"]
+	path = vendor/gems/ruby-coffee-script
+	url = https://github.com/josh/ruby-coffee-script.git
+[submodule "vendor/gems/execjs"]
+	path = vendor/gems/execjs
+	url = https://github.com/sstephenson/execjs.git
+[submodule "vendor/gems/multi_json"]
+	path = vendor/gems/multi_json
+	url = https://github.com/intridea/multi_json.git
