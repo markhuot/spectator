@@ -16,3 +16,6 @@
 [submodule "vendor/gems/execjs"]
 	path = vendor/gems/execjs
 	url = https://github.com/sstephenson/execjs.git
+[submodule "multi_json"]
+	path = multi_json
+	url = https://github.com/intridea/multi_json.git
