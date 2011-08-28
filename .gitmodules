@@ -13,3 +13,6 @@
 [submodule "vendor/gems/ruby-coffee-script"]
 	path = vendor/gems/ruby-coffee-script
 	url = https://github.com/josh/ruby-coffee-script.git
+[submodule "vendor/gems/execjs"]
+	path = vendor/gems/execjs
+	url = https://github.com/sstephenson/execjs.git
