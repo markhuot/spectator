@@ -10,3 +10,6 @@
 [submodule "vendor/gems/builder"]
 	path = vendor/gems/builder
 	url = https://github.com/jimweirich/builder.git
+[submodule "vendor/gems/ruby-coffee-script"]
+	path = vendor/gems/ruby-coffee-script
+	url = https://github.com/josh/ruby-coffee-script.git
