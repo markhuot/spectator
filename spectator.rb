@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+Dir[File.dirname(__FILE__) + "/vendor/gems/*"].each do |path|
+	$:.push path+'/lib'
+end
+
 require 'rubygems'
 require 'tilt'
 require 'fssm'
@@ -60,6 +64,10 @@ class Watcher
 		
 		puts "--- #{out_file}"
 	end
+end
+
+if ARGV.length != 2
+	abort "You didn't properly specify your paths. Try `spectator src dest` instead."
 end
 
 src = File.expand_path ARGV[0]
