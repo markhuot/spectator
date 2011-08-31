@@ -24,6 +24,7 @@ class Watcher
 		in_file = "#{@src}/#{relative}"
 		out_file = "#{@dest}/#{relative}"
 		out_dir = File.dirname out_file
+		is_new = !File.exists?(out_file)
 		
 		if File.directory? in_file
 			FileUtils.mkdir_p out_file if !File.directory? out_file
@@ -35,11 +36,13 @@ class Watcher
 			engine = Tilt[in_file]
 			if not engine.nil? and template = engine.new(in_file)
 				out_file = "#{@dest}/#{path}#{name}.#{ext(engine)}"
+				is_new = !File.exists?(out_file)
 				file = File.open out_file, "wb"
 				begin
 					file.write template.render
 				rescue Exception => e
 					puts e
+					$stdout.flush
 				end
 				file.close
 			else
@@ -47,8 +50,8 @@ class Watcher
 			end
 		end
 		
-		puts ">>> #{in_file}"
-		puts "    #{out_file}"
+		puts (is_new ? "C " : "U ")+relative
+		$stdout.flush
 	end
 	
 	def delete(base, relative)
@@ -66,7 +69,8 @@ class Watcher
 		
 		FileUtils.rm_rf out_file if File.exists? out_file
 		
-		puts "--- #{out_file}"
+		puts "D #{relative}"
+		$stdout.flush
 	end
 	
 private
