@@ -43,3 +43,9 @@
 [submodule "vendor/gems/redcarpet"]
 	path = vendor/gems/redcarpet
 	url = https://github.com/tanoku/redcarpet.git
+[submodule "vendor/gems/nokogiri"]
+	path = vendor/gems/nokogiri
+	url = https://github.com/tenderlove/nokogiri.git
+[submodule "vendor/gems/radius"]
+	path = vendor/gems/radius
+	url = https://github.com/jlong/radius.git
