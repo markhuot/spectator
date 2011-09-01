@@ -28,3 +28,6 @@
 [submodule "vendor/gems/expression_parser"]
 	path = vendor/gems/expression_parser
 	url = https://github.com/nricciar/expression_parser.git
+[submodule "vendor/gems/less"]
+	path = vendor/gems/less
+	url = https://github.com/cowboyd/less.rb.git
