@@ -52,9 +52,9 @@
 [submodule "vendor/gems/rdoc"]
 	path = vendor/gems/rdoc
 	url = https://github.com/rdoc/rdoc.git
-[submodule "vendor/gems/rb-fsevent"]
-	path = vendor/gems/rb-fsevent
-	url = https://github.com/thibaudgg/rb-fsevent.git
 [submodule "vendor/gems/redcloth"]
 	path = vendor/gems/redcloth
 	url = https://github.com/jgarber/redcloth.git
+[submodule "vendor/gems/yajl"]
+	path = vendor/gems/yajl
+	url = https://github.com/brianmario/yajl-ruby.git
