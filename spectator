@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-
-Dir.glob(File.join("vendor", "gems", "*", "lib")).each do |lib|
-  $LOAD_PATH.unshift(File.expand_path(lib))
+path = File.join(File.dirname(__FILE__), "vendor", "gems", "*", "lib")
+Dir.glob(path).each do |lib|
+	$LOAD_PATH.unshift(File.expand_path(lib))
 end
 
 require 'tilt'
