@@ -58,3 +58,6 @@
 [submodule "vendor/gems/yajl"]
 	path = vendor/gems/yajl
 	url = https://github.com/brianmario/yajl-ruby.git
+[submodule "vendor/gems/maruku"]
+	path = vendor/gems/maruku
+	url = https://github.com/nex3/maruku.git
