@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
-Dir[File.dirname(__FILE__) + "/vendor/gems/*"].each do |path|
-	$:.push path+'/lib'
+require 'rubygems'
+
+Dir.glob(File.join("vendor", "gems", "*", "lib")).each do |lib|
+  $LOAD_PATH.unshift(File.expand_path(lib))
 end
 
-require 'rubygems'
 require 'tilt'
 require 'fssm'
 require 'fileutils'
