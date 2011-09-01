@@ -34,3 +34,6 @@
 [submodule "vendor/gems/v8"]
 	path = vendor/gems/v8
 	url = https://github.com/cowboyd/therubyracer.git
+[submodule "vendor/gems/libv8"]
+	path = vendor/gems/libv8
+	url = https://github.com/fractaloop/libv8.git
