@@ -22,3 +22,6 @@
 [submodule "vendor/gems/sass"]
 	path = vendor/gems/sass
 	url = https://github.com/nex3/sass.git
+[submodule "vendor/gems/wikicloth"]
+	path = vendor/gems/wikicloth
+	url = https://github.com/nricciar/wikicloth.git
