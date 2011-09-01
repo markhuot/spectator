@@ -49,3 +49,6 @@
 [submodule "vendor/gems/radius"]
 	path = vendor/gems/radius
 	url = https://github.com/jlong/radius.git
+[submodule "vendor/gems/rdoc"]
+	path = vendor/gems/rdoc
+	url = https://github.com/rdoc/rdoc.git
