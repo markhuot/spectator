@@ -40,6 +40,6 @@
 [submodule "vendor/gems/markaby"]
 	path = vendor/gems/markaby
 	url = https://github.com/markaby/markaby.git
-[submodule "vendor/gems/rdiscount"]
-	path = vendor/gems/rdiscount
-	url = https://github.com/rtomayko/rdiscount.git
+[submodule "vendor/gems/redcarpet"]
+	path = vendor/gems/redcarpet
+	url = https://github.com/tanoku/redcarpet.git
