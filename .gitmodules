@@ -31,3 +31,6 @@
 [submodule "vendor/gems/less"]
 	path = vendor/gems/less
 	url = https://github.com/cowboyd/less.rb.git
+[submodule "vendor/gems/v8"]
+	path = vendor/gems/v8
+	url = https://github.com/cowboyd/therubyracer.git
