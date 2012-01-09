@@ -25,7 +25,7 @@ class Watcher
 		out_file = "#{@dest}/#{relative}"
 		out_dir = File.dirname out_file
 		is_new = !File.exists?(out_file)
-		
+
 		if File.directory? in_file
 			FileUtils.mkdir_p out_file if !File.directory? out_file
 		
@@ -41,6 +41,8 @@ class Watcher
 					file = File.open out_file, "wb"
 					file.write template.render
 					file.close
+				elsif in_file == out_file
+					return
 				else
 					FileUtils.copy in_file, out_file
 				end
@@ -103,13 +105,7 @@ Dir["#{src}/**/*"].each do |file|
 end
 
 FSSM.monitor(src, '**/*', :directories => true) do
-	create do |base, relative, type|
-		watcher.sync base, relative
-	end
-	update do |base, relative, type|
-		watcher.sync base, relative
-	end
-	delete do |base, relative, type|
-		watcher.delete base, relative
-	end
+	create {|base, relative, type| watcher.sync(base, relative) }
+	update {|base, relative, type| watcher.sync(base, relative) }
+	delete {|base, relative, type| watcher.delete(base, relative) }
 end
